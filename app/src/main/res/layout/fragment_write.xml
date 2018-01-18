@@ -1,0 +1,138 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    tools:context="fragment.WriteFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择EPC："
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/sp_select_epc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="存储区:"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/sp_storage"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="访问密码："
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_input_psw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="00000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="起始地址："
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_input_start_address"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="长度："
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_input_length"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="数据内容："
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_input_write_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ScrollView
+        android:focusable="false"
+        android:id="@+id/uhf_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/corners_background" >
+        <TextView
+            android:layout_margin="2dp"
+            android:id="@+id/uhf_tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_read_single_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="读标签"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/bt_write_single_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="写入数据"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>
